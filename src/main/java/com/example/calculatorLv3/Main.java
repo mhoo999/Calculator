@@ -19,16 +19,16 @@ public class Main {
 
             switch (operator) {
                 case ('+'):
-                    calculator.ArithmeticCalculator(num, num2, Calculator.OperatorType.PLUS);
+                    calculator.calculation(num, num2, Calculator.OperatorType.PLUS);
                     break;
                 case ('-'):
-                    calculator.ArithmeticCalculator(num, num2, Calculator.OperatorType.MINUS);
+                    calculator.calculation(num, num2, Calculator.OperatorType.MINUS);
                     break;
                 case ('*'):
-                    calculator.ArithmeticCalculator(num, num2, Calculator.OperatorType.MULTIPLY);
+                    calculator.calculation(num, num2, Calculator.OperatorType.MULTIPLY);
                     break;
                 case ('/'):
-                    calculator.ArithmeticCalculator(num, num2, Calculator.OperatorType.DIVIDE);
+                    calculator.calculation(num, num2, Calculator.OperatorType.DIVIDE);
                     break;
                 default:
                     System.out.println("잘못된 연산 기호를 입력했습니다.");
@@ -37,12 +37,10 @@ public class Main {
             System.out.println("결과값 조회 조건을 입력하세요. 입력한 값 이상의 값들이 출력됩니다.");
             double result = sc.nextDouble();
             List<Double> results = calculator.getter(result);
-            if (results.isEmpty())
-            {
+            if (results.isEmpty()) {
                 System.out.println("보다 큰 값이 없습니다.");
             }
-            else
-            {
+            else {
                 System.out.println("조건을 만족하는 값들: ");
                 results.forEach(System.out::println);
             }

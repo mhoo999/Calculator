@@ -12,7 +12,7 @@ public class Calculator {
         PLUS, MINUS, MULTIPLY, DIVIDE,
     }
 
-    public <T extends Number> void ArithmeticCalculator(T a, T b, OperatorType op) {
+    public <T extends Number> void calculation(T a, T b, OperatorType op) {
         double result = 0;
         switch (op) {
             case PLUS:

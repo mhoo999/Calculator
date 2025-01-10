@@ -16,21 +16,7 @@ public class Main {
             System.out.print("사칙연산 기호를 입력하세요: ");
             char operator = sc.next().charAt(0);
 
-            int result = 0;
-            switch (operator) {
-                case ('+'):
-                    calculator.add(num, num2);
-                    break;
-                case ('-'):
-                    calculator.subtract(num, num2);
-                    break;
-                case ('*'):
-                    calculator.multiply(num, num2);
-                    break;
-                case ('/'):
-                    calculator.divide(num, num2);
-                    break;
-            }
+            calculator.calculation(num, num2, operator);
 
             System.out.println(calculator.getter());
 
